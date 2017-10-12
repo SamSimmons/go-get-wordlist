@@ -143,7 +143,10 @@ func main() {
       c++
     }
   }
-  fmt.Println(foundUrls)
+  for _, seedUrl := range(seedUrls) {
+    foundUrls[seedUrl] = true
+  }
+
   wordlist := []string{}
   chWords := make(chan string)
   chWordsFinished := make(chan bool)
